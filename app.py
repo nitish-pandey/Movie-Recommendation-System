@@ -47,8 +47,8 @@ def hello():
 @app.route('/',methods=['GET','POST'])
 def main():
     input=request.form['name']
-    metadata=pd.read_csv(r'C:\Users\pande\OneDrive\Documents\Movie-Recommender\Datasets\final_metadata2.csv',encoding='latin-1')
-    features=pd.read_csv(r'C:\Users\pande\OneDrive\Documents\Movie-Recommender\Datasets\features2.csv',encoding='latin-1')
+    metadata=pd.read_csv(r'\Datasets\final_metadata2.csv',encoding='latin-1')
+    features=pd.read_csv(r'\Datasets\features2.csv',encoding='latin-1')
     cosine_similarity=get_cosine_similarity(features)
 
     loc=is_there(input,metadata)
